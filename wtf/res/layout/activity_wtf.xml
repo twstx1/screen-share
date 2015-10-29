@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VideoCaptureActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <SurfaceView
+            android:id="@+id/preview_surface"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <SurfaceView
+            android:id="@+id/surfaceView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!--
+         <SurfaceView
+        android:id="@+id/filter_surface"
+        android:layout_width="@dimen/preview_width"
+        android:layout_height="@dimen/preview_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" />
+    -->
+
+    <Button
+        android:id="@+id/RecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:onClick="StartSharing"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/StopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/RecordButton"
+        android:onClick="StopSharing"
+        android:text="Stop" />
+
+    <Button
+        android:id="@+id/SwitchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/StopButton"
+        android:onClick="SwitchCamera"
+        android:text="Switch_Camera" />
+
+    <TextView
+        android:id="@+id/fps_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        android:text="@string/fps_default"
+        android:textColor="#2266ff" />
+
+</RelativeLayout>
